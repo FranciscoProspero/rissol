@@ -1,0 +1,168 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cookbook</title>
+    <meta name="description" content="A cookbook for my recipes">
+    <meta name="author" content="Rissol">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="brand" href="index.html">
+                <h1 style="width: max-content;">My Cookbook</h1>
+            </a>
+            <span class="separator"></span>
+            <!-- a href="/list">Lista 🛒</a>
+            <a href="#news">Plano 📅</a-->
+        </nav>
+        <hr>
+    </header>
+
+    <article class="h-recipe">
+
+        <h2 class="p-name">Caril de Grão de Bico</h2>
+        <div style="display: flex; gap: 20px">
+            <!--a style="align-self: center;" href="/list">Adicionar à lista
+                🛒</a>
+            <a style="align-self: center;" href="#news">Adicionar ao plano 📅</a-->
+
+        </div>
+
+        <div class="recipe">
+
+            <div class="recipe-ingredients">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li class="p-ingredient"><code>500 g </code> grão de bico </li>
+                    <li class="p-ingredient"><code>200 ml </code> leite de coco </li>
+                    <li class="p-ingredient"><code>1 unidade </code> tomate </li>
+                    <li class="p-ingredient"><code>1 meia.unidade </code> limão </li>
+                    <li class="p-ingredient"><code>1 q.b. </code> gengibre </li>
+                    <li class="p-ingredient"><code>1 meia.unidade </code> cebola </li>
+                    <li class="p-ingredient"><code>2 unidade </code> alho </li>
+                    <li class="p-ingredient"><code>1 q.b. </code> sal </li>
+                    <li class="p-ingredient"><code>1 q.b. </code> pimenta </li>
+                    <li class="p-ingredient"><code>1 q.b. </code> caril em pó </li>
+                    <li class="p-ingredient"><code>1 q.b. </code> coentros </li>
+                </ul>
+            </div>
+
+            <div class="recipe-instructions">
+                <h3>Instructions</h3>
+                <div class="e-instructions">
+                    <ol class="alter">
+                        <li>Picar cebola, alho, gengibre e refogar</li>
+                        <li>Adicionar caril e pimenta, mexer</li>
+                        <li>Adicionar tomate picado (s/pele) e sumo do limão</li>
+                        <li>Refogar um pouco</li>
+                        <li>Adicionar o grão</li>
+                        <li>Adicionar o leite de coco, temperar com sal</li>
+                        <li>Deixar levantar fervura, baixar o lume e deixar 2 a 5 min</li>
+                        <li>Picar coentros para servir</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+        <center>
+            <img src="http://placekitten.com/320/320"></img>
+        </center>
+    </article>
+
+
+    <footer>
+        <span style="margin-right: auto;">Made with ❤ and <a
+                href="https://github.com/LudeeD/prandium">prandium</a></span>
+        <span><a href=https://franciscoprospero.github.io/rissol/>Rissol</a>, 2022-10-26</span>
+    </footer>
+    <hr>
+</body>
+
+<style>
+    body {
+        font-size: larger;
+    }
+
+    .separator {
+        margin-left: auto;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+
+    .brand {
+        color: black;
+    }
+
+    button {
+        margin-right: 0;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .alter>li:nth-child(odd) {
+        background: #efefef;
+    }
+
+    .recipe {
+        display: flex;
+    }
+
+    .recipe-instructions {
+        width: 70%;
+    }
+
+    .recipe-ingredients {
+        width: 30%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            font-size: medium;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0px 20px;
+        }
+
+        h1 {
+            margin-bottom: 0px;
+        }
+
+        .separator {
+            display: none;
+        }
+
+        .recipe {
+            flex-wrap: wrap;
+        }
+
+        .recipe-instructions {
+            width: 100%;
+        }
+
+        .recipe-ingredients {
+            width: 100%;
+        }
+    }
+</style>
+
+</html>
