@@ -1,0 +1,11 @@
+{
+  "author": "John Doe",
+  "author_url": "https://google.com",
+  "description": "A cookbook for my recipes",
+  "output_folder": "./docs",
+  "title": "My Cookbook",
+  "translations": {
+    "ingredients": "Ingredients",
+    "instructions": "Instructions"
+  }
+}
