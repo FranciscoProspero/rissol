@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cookbook</title>
-    <meta name="description" content="A cookbook for my recipes">
-    <meta name="author" content="Rissol">
+    <title>{{config.title}}</title>
+    <meta name="description" content="{{config.description}}">
+    <meta name="author" content="{{config.author}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
 </head>
 
@@ -15,7 +15,7 @@
     <header>
         <nav>
             <a class="brand" href="index.html">
-                <h1 style="width: max-content;">My Cookbook</h1>
+                <h1 style="width: max-content;">{{config.title}}</h1>
             </a>
             <span class="separator"></span>
             <!--a href="/list">Lista 🛒</a>
@@ -25,14 +25,16 @@
     </header>
 
     <ul>
-        <li><a href="0.html">Arroz com baguette</a></li>
+        {{#each recipes as |recipe|}}
+        <li><a href="{{recipe.id}}.html">{{recipe.name}}</a></li>
+        {{/each}}
     </ul>
 
 
     <footer>
         <span style="margin-right: auto;">Made with ❤ and <a
                 href="https://github.com/LudeeD/prandium">prandium</a></span>
-        <span><a href="https://franciscoprospero.github.io/rissol/">Rissol</a>, 2022-10-26</span>
+        <span><a href="{{config.author_url}}">{{config.author}}</a>, {{config.date}}</span>
     </footer>
     <hr>
 </body>

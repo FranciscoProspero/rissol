@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cookbook</title>
-    <meta name="description" content="A cookbook for my recipes">
-    <meta name="author" content="Rissol">
+    <title>{{config.title}}</title>
+    <meta name="description" content="{{config.description}}">
+    <meta name="author" content="{{config.author}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
 </head>
 
@@ -15,7 +15,7 @@
     <header>
         <nav>
             <a class="brand" href="index.html">
-                <h1 style="width: max-content;">My Cookbook</h1>
+                <h1 style="width: max-content;">{{config.title}}</h1>
             </a>
             <span class="separator"></span>
             <!-- a href="/list">Lista 🛒</a>
@@ -26,7 +26,7 @@
 
     <article class="h-recipe">
 
-        <h2 class="p-name">Arroz com baguette</h2>
+        <h2 class="p-name">{{recipe.name}}</h2>
         <div style="display: flex; gap: 20px">
             <!--a style="align-self: center;" href="/list">Adicionar à lista
                 🛒</a>
@@ -37,34 +37,21 @@
         <div class="recipe">
 
             <div class="recipe-ingredients">
-                <h3>Ingredients</h3>
+                <h3>{{config.translations.ingredients}}</h3>
                 <ul>
-                    <li class="p-ingredient"><code>500 g </code> grão de bico </li>
-                    <li class="p-ingredient"><code>200 ml </code> leite de coco </li>
-                    <li class="p-ingredient"><code>1 unidade </code> tomate </li>
-                    <li class="p-ingredient"><code>1 meia.unidade </code> limão </li>
-                    <li class="p-ingredient"><code>1 q.b. </code> gengibre </li>
-                    <li class="p-ingredient"><code>1 meia.unidade </code> cebola </li>
-                    <li class="p-ingredient"><code>2 unidade </code> alho </li>
-                    <li class="p-ingredient"><code>1 q.b. </code> sal </li>
-                    <li class="p-ingredient"><code>1 q.b. </code> pimenta </li>
-                    <li class="p-ingredient"><code>1 q.b. </code> caril em pó </li>
-                    <li class="p-ingredient"><code>1 q.b. </code> coentros </li>
+                    {{#each recipe.ingredients as |ingredient|}}
+                    <li class="p-ingredient"><code>{{ingredient.amount}} </code> {{ingredient.name}} </li>
+                    {{/each}}
                 </ul>
             </div>
 
             <div class="recipe-instructions">
-                <h3>Instructions</h3>
+                <h3>{{config.translations.instructions}}</h3>
                 <div class="e-instructions">
                     <ol class="alter">
-                        <li>Picar cebola, alho, gengibre e refogar</li>
-                        <li>Adicionar caril e pimenta, mexer</li>
-                        <li>Adicionar tomate picado (s/pele) e sumo do limão</li>
-                        <li>Refogar um pouco</li>
-                        <li>Adicionar o grão</li>
-                        <li>Adicionar o leite de coco, temperar com sal</li>
-                        <li>Deixar levantar fervura, baixar o lume e deixar 2 a 5 min</li>
-                        <li>Picar coentros para servir</li>
+                        {{#each recipe.instructions}}
+                        <li>{{this}}</li>
+                        {{/each}}
                     </ol>
                 </div>
             </div>
@@ -79,7 +66,7 @@
     <footer>
         <span style="margin-right: auto;">Made with ❤ and <a
                 href="https://github.com/LudeeD/prandium">prandium</a></span>
-        <span><a href=https://franciscoprospero.github.io/rissol/>Rissol</a>, 2022-10-26</span>
+        <span><a href={{config.author_url}}>{{config.author}}</a>, {{config.date}}</span>
     </footer>
     <hr>
 </body>
