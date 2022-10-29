@@ -8,12 +8,12 @@
 ## Ingredients
 
 - cabrito 4/5 Kg
-- dente de alho 5 unidade
-- mão de salsa 1 unidade
+- dentes de alho 5
+- mão de salsa 1
 - banha 150g
-- malga de vinho verde tinto 1 meia.unidade
-- embalagem de pimentão doce 1 unidade
-- mão de sal 1 unidade
+- malga de vinho verde tinto 1/2
+- embalagem de pimentão doce 1
+- mão de sal 1
 - vinagre 15ml
 
 ## Preparação
