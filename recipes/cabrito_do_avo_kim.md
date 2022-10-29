@@ -7,7 +7,7 @@
 
 ## Ingredients
 
-- cabrito 4-5 Kg
+- cabrito 4a5 Kg
 - de alho 5 dentes
 - de salsa 1 mão
 - banha 150 g
